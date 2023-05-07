@@ -1,43 +1,26 @@
 <template>
   <div class="sec-6">
-    <h1>Our Team</h1>
-    <div class="sidesFlex">
-      <div class="side1">
-        <img src="@/assets/Designer.png" alt="" />
-        <h3>Ahmedshahethi</h3>
-        <span>UI/UX Desinger</span>
-
-        <p>
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eius,
-          sint assumenda rerum perspiciatis sapiente qui fugit error animi,
-          voluptatum facilis ea expedita ipsum blanditiis non rem distinctio!
-          Officia, ea.
-        </p>
-      </div>
-
-      <div class="side2">
-        <img src="@/assets/Designer.png" alt="" />
-        <h3>Ahmedshahethi</h3>
-        <span>UI/UX Desinger</span>
-        <p>
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eius,
-          sint assumenda rerum perspiciatis sapiente qui fugit error animi,
-          voluptatum facilis ea expedita ipsum blanditiis non rem distinctio!
-          Officia, ea.
-        </p>
-      </div>
-
-      <div class="side3">
-        <img src="@/assets/Designer.png" alt="" />
-        <h3>Ahmedshahethi</h3>
-        <span>UI/UX Desinger</span>
-        <p>
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eius,
-          sint assumenda rerum perspiciatis sapiente qui fugit error animi,
-          voluptatum facilis ea expedita ipsum blanditiis non rem distinctio!
-          Officia, ea.
-        </p>
-      </div>
+    <h1>
+      Our <br />
+      Team
+    </h1>
+    <div class="side-1">
+      <img src="@/assets/Designer.png" alt="" />
+      <h2>Ahmed shahethi</h2>
+      <span>Ux/UI Designer</span>
+      <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+    </div>
+    <div class="side-2">
+      <img src="@/assets/Designer.png" alt="" />
+      <h2>Ahmed shahethi</h2>
+      <span>Ux/UI Designer</span>
+      <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+    </div>
+    <div class="side-3">
+      <img src="@/assets/Designer.png" alt="" />
+      <h2>Ahmed shahethi</h2>
+      <span>Ux/UI Designer</span>
+      <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
     </div>
   </div>
 </template>
@@ -56,68 +39,61 @@ export default {
   padding: 0;
 }
 
-li,
-a,
-button {
-  font-weight: bold;
-  font-size: 20px;
-  text-decoration: none;
-}
-
 .sec-6 {
-  position: relative;
   background-color: #eff0f3;
-  padding-top: 20px;
-}
-
-.sec-6 h1 {
-  text-align: center;
-  color: #222b5c;
-  font-size: 64px;
-  font-weight: bold;
-  margin: 60px;
-}
-
-.sec-6 .sidesFlex {
   display: flex;
-  overflow: hidden;
   position: relative;
-  padding: 40px;
-  width: 80%;
-  margin: auto;
-}
-
-.side1,
-.side2,
-.side3 {
-  background-color: white;
-  border-radius: 20px;
-  width: 30%;
-  margin: auto;
-  align-items: center;
-  padding: 20px;
-}
-
-.sec-6 img {
+  flex-wrap: wrap;
   width: 100%;
 }
 
-.sidesFlex h3 {
+.sec-6 h1 {
   color: #222b5c;
-  font-size: 38px;
+  font-size: 64px;
   font-weight: bold;
+  margin: 50px 10px auto 80px;
 }
 
-.sidesFlex span {
+.side-1,
+.side-2,
+.side-3 {
+  background-color: white;
+  width: min-content;
+  padding: 15px;
+  border: white solid 5px;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.sec-6 img {
+  margin: -12px;
+  padding: 10px;
+  width: 345px;
+}
+
+.sec-6 h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #222b5c;
+}
+
+.sec-6 p {
+  font-size: 22px;
+  font-weight: 500px;
+  padding-top: 10px;
+  color: #787878;
+}
+
+.sec-6 span {
   color: #787878;
   font-size: 26px;
   font-weight: 500px;
 }
 
-.sidesFlex p {
-  margin-top: 40px;
-  color: #787878;
-  font-size: 26px;
-  font-weight: 500px;
+@media screen and (max-width: 1200px) {
+  .sec-6 h1 {
+    font-size: 40px;
+    margin: 8px;
+  }
 }
 </style>

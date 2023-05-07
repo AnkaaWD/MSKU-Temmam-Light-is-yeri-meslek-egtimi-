@@ -1,29 +1,26 @@
 <template>
   <div class="sec-3">
-    <h1>Our Projects</h1>
+    <h1>
+      Our <br />
+      Projects
+    </h1>
     <div class="side-1">
       <img src="@/assets/image_1.png" alt="" />
       <h2>2022 Projects</h2>
-      <p>
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, ullam
-        rem? Non sed, ...
-      </p>
+      <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+      <span>14/03/2022</span>
     </div>
     <div class="side-2">
       <img src="@/assets/image_3.png" alt="" />
       <h2>2022 Projects</h2>
-      <p>
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, ullam
-        rem? Non sed, ...
-      </p>
+      <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+      <span>14/03/2022</span>
     </div>
     <div class="side-3">
       <img src="@/assets/image_4.png" alt="" />
       <h2>2022 Projects</h2>
-      <p>
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, ullam
-        rem? Non sed, ...
-      </p>
+      <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+      <span>14/03/2022</span>
     </div>
   </div>
 </template>
@@ -46,7 +43,7 @@ export default {
   background-color: #eff0f3;
   display: flex;
   position: relative;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -85,5 +82,17 @@ export default {
   font-weight: 500px;
   padding-top: 10px;
   color: #787878;
+}
+
+.sec-3 span {
+  color: #ffae02;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 800px) {
+  .sec-3 h1 {
+    font-size: 40px;
+    margin: 10px;
+  }
 }
 </style>

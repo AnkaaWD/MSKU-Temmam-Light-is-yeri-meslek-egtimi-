@@ -6,7 +6,7 @@
       <li><img src="@/assets/Partner_1.png" alt="" /></li>
       <li><img src="@/assets/Partner_2.png" alt="" /></li>
       <li><img src="@/assets/Partner_3.png" alt="" /></li>
-      <li><img src="@/assets/Partner_4.png" alt="" /></li>
+      <li><img class="img-4" src="@/assets/Partner_4.png" alt="" /></li>
     </ul>
   </div>
 </template>
@@ -77,5 +77,33 @@ button {
   width: 23%;
   height: 175px;
   text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .sec-5 ul {
+    display: block;
+  }
+  .sec-5 ul li {
+    width: 80%;
+    margin: 10px auto;
+  }
+  .sec-5 p {
+    font-size: 16px;
+  }
+
+  .sec-5 span {
+    color: #222b5c;
+    font-size: 19px;
+    font-weight: 700;
+  }
+  .sec-5 h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sec-5 ul li .img-4 {
+    width: 250px;
+  }
 }
 </style>

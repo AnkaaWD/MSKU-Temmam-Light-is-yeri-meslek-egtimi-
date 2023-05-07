@@ -1,28 +1,31 @@
 <template>
   <div class="sec-4">
-    <h1>Success Stories</h1>
-    <aside>
-      <div>
+    <div class="title-text">
+      <h1>Success Stories</h1>
+    </div>
+    <div class="story-box">
+      <div class="story-img">
         <img src="@/assets/image_3.png" alt="" />
       </div>
-      <div>
-        <h2>2022 Projects</h2>
+      <div class="story-parag">
+        <h1>2022 Projects</h1>
+        <div class="story-text">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam non
+            corporis modi officia ea. Et magnam, provident eum vel eveniet
+            deleniti mollitia obcaecati perferendis? Maxime voluptatem deleniti
+            numquam ut ad!,Lorem ipsum, dolor sit amet consectetur adipisicing
+            elit. Tempore velit repellat repellendus laudantium quisquam
+            architecto magni nulla, adipisci libero itaque et soluta eaque
+            ratione obcaecati in eveniet ex vero cupiditate?,Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Vero quia labore rerum ullam
+            natus, inventore accusamus praesentium reprehenderit culpa expedita,
+            soluta voluptas reiciendis a veritatis earum? Earum, totam
+            assumenda. Facere.
+          </p>
+        </div>
       </div>
-      <div>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam non
-          corporis modi officia ea. Et magnam, provident eum vel eveniet
-          deleniti mollitia obcaecati perferendis? Maxime voluptatem deleniti
-          numquam ut ad!,Lorem ipsum, dolor sit amet consectetur adipisicing
-          elit. Tempore velit repellat repellendus laudantium quisquam
-          architecto magni nulla, adipisci libero itaque et soluta eaque ratione
-          obcaecati in eveniet ex vero cupiditate?,Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Vero quia labore rerum ullam natus,
-          inventore accusamus praesentium reprehenderit culpa expedita, soluta
-          voluptas reiciendis a veritatis earum? Earum, totam assumenda. Facere.
-        </p>
-      </div>
-    </aside>
+    </div>
   </div>
 </template>
 
@@ -40,43 +43,68 @@ export default {
   padding: 0;
 }
 
-.sec-4 h1 {
+.sec-4 {
+  width: 100%;
+  padding: 70px 0;
+}
+
+.title-text {
   text-align: center;
+  padding-bottom: 70px;
+}
+
+.title-text h1 {
+  margin: auto;
   color: #222b5c;
   font-size: 64px;
   font-weight: bold;
-  margin: 80px;
 }
 
-.sec-4 aside {
+.story-box {
+  width: 80%;
+  margin: auto;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
 }
 
-.sec-4 div h2 {
-  text-align: center;
-  width: 200px;
-  position: relative;
-  left: 10px;
-  top: 134px;
-  height: 100px;
+.story-parag {
+  flex-basis: 50%;
+}
+
+.story-img {
+  flex-basis: 50%;
+  margin: auto;
+}
+
+.story-img img {
+  width: 70%;
+}
+
+.story-parag h1 {
+  text-align: left;
+  margin-bottom: 10px;
   color: #222b5c;
   font-size: 25px;
-  font-family: "Segoe UI";
   font-weight: bold;
 }
 
-.sec-4 div p {
-  position: relative;
-  top: 200px;
-  width: 65%;
-  right: 200px;
-  color: #787878;
+.story-text p {
+  text-align: justify;
 }
 
-.sec-4 div img {
-  position: relative;
-  top: 12px;
-  margin: 20px;
+@media screen and (max-width: 1200px) {
+  .story-box {
+    flex-direction: column;
+  }
+
+  .story-img {
+    width: 100%;
+  }
+
+  .title-text h1 {
+    font-size: 40px;
+  }
 }
 </style>

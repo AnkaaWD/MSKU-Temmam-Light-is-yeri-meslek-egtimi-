@@ -110,4 +110,26 @@ export default {
   border: solid #bec5ff 30px;
   border-radius: 360px;
 }
+
+@media screen and (max-width: 1200px) {
+  .about {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .about {
+    width: 95%;
+  }
+  .sec-2 h1 {
+    font-size: 40px;
+  }
+  .sec-2 ul h2 {
+    font-size: 18px;
+  }
+
+  .sec-2 ul p {
+    font-size: 14px;
+  }
+}
 </style>

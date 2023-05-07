@@ -36,69 +36,56 @@
         style="width: 100%; height: 100%"
       />
     </div>
-    <a class="prev" onclick="">&#10094;</a>
-    <a class="next" onclick="">&#10095;</a>
-    <div class="dotsbox">
-      <span class="dot" onclick=""></span>
-      <span class="dot" onclick=""></span>
-      <span class="dot" onclick=""></span>
-    </div>
 
-    <!-- <a class="prev" @click="()=>plusSlides(-1)">&#10094;</a>
-    <a class="next" @click="()=>plusSlides(1)">&#10095;</a>
+    <a class="prev" @click="plusSlides(-1)">&#10094;</a>
+    <a class="next" @click="plusSlides(1)">&#10095;</a>
     <div class="dotsbox">
-      <span class="dot" @click="()=>currentSlide(1)"></span>
-      <span class="dot" @click="()=>currentSlide(2)"></span>
-      <span class="dot" @click="()=>currentSlide(3)"></span>
-    </div> -->
+      <span class="dot" @click="currentSlide(1)"></span>
+      <span class="dot" @click="currentSlide(2)"></span>
+      <span class="dot" @click="currentSlide(3)"></span>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "appImgSlider",
+  data() {
+    return {
+      slideIndex: 1,
+    };
+  },
+  mounted() {
+    this.showSlides(this.slideIndex);
+  },
+  methods: {
+    plusSlides(n) {
+      this.showSlides((this.slideIndex += n));
+    },
+    currentSlide(n) {
+      this.showSlides((this.slideIndex = n));
+    },
+    showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("myslider");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        this.slideIndex = 1;
+      }
+      if (n < 1) {
+        this.slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[this.slideIndex - 1].style.display = "block";
+      dots[this.slideIndex - 1].className += " active";
+    },
+  },
 };
-
-// const myslide = document.querySelectorAll(".myslider"),
-//   dot = document.querySelectorAll(".dot");
-// let counter = 1;
-// slidefun(counter);
-// let timer = setInterval(autoslide, 8000);
-// function autoslide() {
-//   counter += 1;
-//   slidefun(counter);
-// }
-// function plusSlides(n) {
-//   counter += n;
-//   slidefun(counter);
-//   resetTimer();
-// }
-// function currentSlide(n) {
-//   counter = n;
-//   slidefun(counter);
-//   resetTimer();
-// }
-// function resetTimer() {
-//   clearInterval(timer);
-//   timer = setInterval(autoslide, 8000);
-// }
-// function slidefun(n) {
-//   let i;
-//   for (i = 0; i < myslide.length; i++) {
-//     myslide[i].style.display = "none";
-//   }
-//   for (i = 0; i < dot.length; i++) {
-//     dot[i].classList.remove("active");
-//   }
-//   if (n > myslide.length) {
-//     counter = 1;
-//   }
-//   if (n < 1) {
-//     counter = myslide.length;
-//   }
-//   myslide[counter - 1].style.display = "block";
-//   dot[counter - 1].classList.add = "active";
-// }
 </script>
 
 <style scoped>
@@ -205,5 +192,38 @@ export default {
   font-size: 32px;
   font-weight: 600;
   font-family: "Segoe UI";
+}
+
+@media screen and (max-width: 1200px) {
+  .txt h1 {
+    font-size: 48px;
+    font-family: "Segoe UI";
+  }
+  .txt p {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Segoe UI";
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+  }
+  .prev,
+  .next {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .txt h1 {
+    font-size: 24px;
+    font-family: "Segoe UI";
+  }
+  .txt p {
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Segoe UI";
+  }
 }
 </style>
